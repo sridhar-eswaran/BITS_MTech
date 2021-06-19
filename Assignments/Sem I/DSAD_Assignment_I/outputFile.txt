@@ -1,0 +1,76 @@
+
+ ***CHECK OUT BOOKS***
+100001 has been successfully checked out; # of books available:3
+ ***CHECK OUT BOOKS***
+100002 has been successfully checked out; # of books available:4
+ ***CHECK OUT BOOKS***
+100002 has been successfully checked out; # of books available:3
+ ***CHECK OUT BOOKS***
+100002 has been successfully checked out; # of books available:2
+ ***CHECK OUT BOOKS***
+100003 has been successfully checked out; # of books available:14
+ ***CHECK OUT BOOKS***
+100003 has been successfully checked out; # of books available:13
+ ***CHECK OUT BOOKS***
+100001 has been successfully checked out; # of books available:2
+ ***CHECK OUT BOOKS***
+100001 has been successfully checked out; # of books available:1
+ ***CHECK OUT BOOKS***
+100001 has been successfully checked out; # of books available:0
+ ***CHECK OUT BOOKS***
+100005 has been successfully checked out; # of books available:2
+ ~~~CHECK IN BOOKS~~~
+100001 has been successfully checked in; # of books available:1
+ ~~~CHECK IN BOOKS~~~
+100002 has been successfully checked in; # of books available:3
+ ***CHECK OUT BOOKS***
+100001 has been successfully checked out; # of books available:0
+
+ ***NOT ISSUED BOOKS LIST***
+ Book ID: 100004 is not issued and the available copies are: 12
+ Book ID: 100006 is not issued and the available copies are: 8
+ Book ID: 100007 is not issued and the available copies are: 6
+ Book ID: 100008 is not issued and the available copies are: 7
+ Book ID: 100009 is not issued and the available copies are: 9
+ Book ID: 100010 is not issued and the available copies are: 15
+ Book ID: 100011 is not issued and the available copies are: 20
+ Book ID: 100012 is not issued and the available copies are: 5
+ Book ID: 100013 is not issued and the available copies are: 8
+ Book ID: 100014 is not issued and the available copies are: 6
+ Book ID: 100015 is not issued and the available copies are: 3
+ Book ID: 100016 is not issued and the available copies are: 7
+ Book ID: 100017 is not issued and the available copies are: 9
+ Book ID: 100018 is not issued and the available copies are: 4
+ Book ID: 100019 is not issued and the available copies are: 8
+ Book ID: 100020 is not issued and the available copies are: 3
+
+ ***BOOK SEARCH RESULT***
+ Book 100006 available for check out; # of books available:8
+
+ ***BOOK INVENTORY***
+***Total Number of Books available:20***
+Book ID:100001 	 Available:0 	 No. Check outs = 5
+Book ID:100002 	 Available:3 	 No. Check outs = 3
+Book ID:100003 	 Available:13 	 No. Check outs = 2
+Book ID:100004 	 Available:12 	 No. Check outs = 0
+Book ID:100005 	 Available:2 	 No. Check outs = 1
+Book ID:100006 	 Available:8 	 No. Check outs = 0
+Book ID:100007 	 Available:6 	 No. Check outs = 0
+Book ID:100008 	 Available:7 	 No. Check outs = 0
+Book ID:100009 	 Available:9 	 No. Check outs = 0
+Book ID:100010 	 Available:15 	 No. Check outs = 0
+Book ID:100011 	 Available:20 	 No. Check outs = 0
+Book ID:100012 	 Available:5 	 No. Check outs = 0
+Book ID:100013 	 Available:8 	 No. Check outs = 0
+Book ID:100014 	 Available:6 	 No. Check outs = 0
+Book ID:100015 	 Available:3 	 No. Check outs = 0
+Book ID:100016 	 Available:7 	 No. Check outs = 0
+Book ID:100017 	 Available:9 	 No. Check outs = 0
+Book ID:100018 	 Available:4 	 No. Check outs = 0
+Book ID:100019 	 Available:8 	 No. Check outs = 0
+Book ID:100020 	 Available:3 	 No. Check outs = 0
+
+ ***TOP3 BOOKS LIST***
+ Top Book 1:: ID:100001; Checkout Count: 5
+ Top Book 2:: ID:100002; Checkout Count: 3
+ Top Book 3:: ID:100003; Checkout Count: 2
