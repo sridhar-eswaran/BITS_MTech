@@ -117,17 +117,14 @@ class binary_search_tree:
         global t1,t2,t3
         if cur_node!=None:
             self._topChkOut(cur_node.left_child)
-
             if t1 == None:
                 t1 = cur_node
-
             elif t1 != None and t2 == None:
                 if t1.checkOut_count > cur_node.checkOut_count:
                     t2 = cur_node
                 elif t1.checkOut_count <= cur_node.checkOut_count:
                     t2 = t1
                     t1 = cur_node
-
             elif t1 != None and t2 != None and t3 == None:
                 if t1.checkOut_count <= cur_node.checkOut_count and t2.checkOut_count > cur_node.checkOut_count:
                     t3 = t2
@@ -138,24 +135,16 @@ class binary_search_tree:
                     t2 = cur_node
                 else:
                     t3 = cur_node
-
-            
             elif t1 != None and t2 != None and t3 != None:
                 if t1.checkOut_count <= cur_node.checkOut_count:
                     t3 = t2
                     t2 = t1
                     t1 = cur_node
-
                 elif t1.checkOut_count > cur_node.checkOut_count and t2.checkOut_count <= cur_node.checkOut_count:
                     t3 = t2
                     t2 = cur_node
-
-                
                 elif t2.checkOut_count > cur_node.checkOut_count and t3.checkOut_count <= cur_node.checkOut_count:
                     t3 = cur_node
-                        
-                    
-              
             self._topChkOut(cur_node.right_child)
 
 #%% Q4 :: Get Not issued books
