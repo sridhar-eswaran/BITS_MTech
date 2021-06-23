@@ -4,7 +4,16 @@ Created on Mon Jun 14 22:14:31 2021
 
 @author: SESWARAN
 """
+"""
+Library Required to prompt the user for the files
+"""
+from tkinter import Tk,filedialog
+gui = Tk()
+gui.withdraw()
 
+"""
+Node class of the binary tree
+"""
 class node:
     def __init__(self,book_id=None,avail_count=None):
         self.book_id=book_id
@@ -15,6 +24,9 @@ class node:
         self.right_child=None
         #self.parent=None # pointer to parent node in tree
 
+"""
+Binary Tree initialization
+""""
 class binary_search_tree:
     def __init__(self):
         self.root=None
@@ -210,7 +222,10 @@ class binary_search_tree:
             self._print_tree(cur_node.right_child)
 
 
-#%% Main Function
+#%% Functions calling the methods
+"""
+To read the book list
+"""
 def readBooksList(binaryTree,filepath):
     with open(filepath) as file:
         lines = file.readlines()
@@ -218,10 +233,9 @@ def readBooksList(binaryTree,filepath):
     [binaryTree.readBookList(int(book[0]),int(book[1])) for book in lines]
     return lines
 
-#create outputFile txt
-
-
-
+"""
+To read the commands
+"""
 def readPrompts(binaryTree,filepath):
     with open(filepath) as file:
         lines = file.readlines()
@@ -240,18 +254,32 @@ def readPrompts(binaryTree,filepath):
         if lines[line][0] == 'printInventory':
             binaryTree.print_tree()
     return lines
-            
-txtfileLocation = 'C:/Users/seswaran/OneDrive/OneDrive - JAGUAR LAND ROVER/M.Tech_Materials/05_Assignments/DSAD/fileList.txt'
-promptfileLocation = 'C:/Users/seswaran/OneDrive/OneDrive - JAGUAR LAND ROVER/M.Tech_Materials/05_Assignments/DSAD/prompts.txt' 
+
+
+#%% Main Function
+"""
+Main Function
+"""
+#txtfileLocation = 'C:/Users/seswaran/OneDrive/OneDrive - JAGUAR LAND ROVER/M.Tech_Materials/05_Assignments/DSAD/fileList.txt'
+#promptfileLocation = 'C:/Users/seswaran/OneDrive/OneDrive - JAGUAR LAND ROVER/M.Tech_Materials/05_Assignments/DSAD/prompts.txt'
+
+#Get user input for files
+txtfileLocation = filedialog.askopenfile(title='Choose the booklist')
+promptfileLocation = filedialog.askopenfile(title='Choose commands file')
+
 bookLedger = binary_search_tree()  
-lines = readBooksList(bookLedger,txtfileLocation)
-file = open('C:/Users/seswaran/OneDrive/OneDrive - JAGUAR LAND ROVER/M.Tech_Materials/05_Assignments/DSAD/outputFile.txt','w')
+lines = readBooksList(bookLedger,txtfileLocation.name)
+filename = txtfileLocation.name.split('/')[0:-1]
+filename = '/'.join(filename)+'/outputFile.txt'
+
+#file = open('C:/Users/seswaran/OneDrive/OneDrive - JAGUAR LAND ROVER/M.Tech_Materials/05_Assignments/DSAD/outputFile.txt','w')
+file = open(filename,'w')
 #bookIdList = [int(line[0]) for line in lines]   
 totalBooks  = len(lines)
 t1=None
 t2=None
 t3=None
-prompts = readPrompts(bookLedger,promptfileLocation)
+prompts = readPrompts(bookLedger,promptfileLocation.name)
 file.close()
 
 
